@@ -66,7 +66,7 @@ struct ContentView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-        }
+        }.padding(.horizontal, 5)
     }
     
     private var difficultyPicker: some View {
