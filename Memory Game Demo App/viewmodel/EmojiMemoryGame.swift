@@ -4,12 +4,12 @@ import SwiftUI
 class EmojiMemoryGame {
     
     private static let defaultPairs = GameDifficulty.medium.rawValue
-    var difficulty: GameDifficulty = .medium
     
     private var model: MemoryGame
     private var timer: Timer?
     private var secondsElapsed: Int
     
+    var difficulty: GameDifficulty
     var cards: [Card] { model.cards }
     var score: Int { model.score }
     
@@ -21,6 +21,7 @@ class EmojiMemoryGame {
     
     init() {
         self.model = MemoryGame(numberOfPairs: EmojiMemoryGame.defaultPairs)
+        self.difficulty = .medium
         self.secondsElapsed = 0
         startTimer()
     }
