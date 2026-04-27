@@ -6,15 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8A6D0C2C2F9F7807001D36A6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8A6D0C2B2F9F7807001D36A6 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8A6D0C032F9EAE59001D36A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8A6D0BED2F9EAE57001D36A6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8A6D0BF42F9EAE57001D36A6;
-			remoteInfo = "Memory Game Demo App";
-		};
-		8A6D0C0D2F9EAE59001D36A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A6D0BED2F9EAE57001D36A6 /* Project object */;
 			proxyType = 1;
@@ -26,7 +23,7 @@
 /* Begin PBXFileReference section */
 		8A6D0BF52F9EAE57001D36A6 /* Memory Game Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory Game Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6D0C022F9EAE59001D36A6 /* Memory Game Demo AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Memory Game Demo AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A6D0C0C2F9EAE59001D36A6 /* Memory Game Demo AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Memory Game Demo AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6D0C2B2F9F7807001D36A6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -38,11 +35,6 @@
 		8A6D0C052F9EAE59001D36A6 /* Memory Game Demo AppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Memory Game Demo AppTests";
-			sourceTree = "<group>";
-		};
-		8A6D0C0F2F9EAE59001D36A6 /* Memory Game Demo AppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Memory Game Demo AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,22 +54,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A6D0C092F9EAE59001D36A6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8A6D0BEC2F9EAE57001D36A6 = {
 			isa = PBXGroup;
 			children = (
+				8A6D0C2B2F9F7807001D36A6 /* .gitignore */,
 				8A6D0BF72F9EAE57001D36A6 /* Memory Game Demo App */,
 				8A6D0C052F9EAE59001D36A6 /* Memory Game Demo AppTests */,
-				8A6D0C0F2F9EAE59001D36A6 /* Memory Game Demo AppUITests */,
 				8A6D0BF62F9EAE57001D36A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +72,6 @@
 			children = (
 				8A6D0BF52F9EAE57001D36A6 /* Memory Game Demo App.app */,
 				8A6D0C022F9EAE59001D36A6 /* Memory Game Demo AppTests.xctest */,
-				8A6D0C0C2F9EAE59001D36A6 /* Memory Game Demo AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,29 +124,6 @@
 			productReference = 8A6D0C022F9EAE59001D36A6 /* Memory Game Demo AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8A6D0C0B2F9EAE59001D36A6 /* Memory Game Demo AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8A6D0C1C2F9EAE59001D36A6 /* Build configuration list for PBXNativeTarget "Memory Game Demo AppUITests" */;
-			buildPhases = (
-				8A6D0C082F9EAE59001D36A6 /* Sources */,
-				8A6D0C092F9EAE59001D36A6 /* Frameworks */,
-				8A6D0C0A2F9EAE59001D36A6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8A6D0C0E2F9EAE59001D36A6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8A6D0C0F2F9EAE59001D36A6 /* Memory Game Demo AppUITests */,
-			);
-			name = "Memory Game Demo AppUITests";
-			packageProductDependencies = (
-			);
-			productName = "Memory Game Demo AppUITests";
-			productReference = 8A6D0C0C2F9EAE59001D36A6 /* Memory Game Demo AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +138,6 @@
 						CreatedOnToolsVersion = 26.2;
 					};
 					8A6D0C012F9EAE59001D36A6 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = 8A6D0BF42F9EAE57001D36A6;
-					};
-					8A6D0C0B2F9EAE59001D36A6 = {
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = 8A6D0BF42F9EAE57001D36A6;
 					};
@@ -202,7 +159,6 @@
 			targets = (
 				8A6D0BF42F9EAE57001D36A6 /* Memory Game Demo App */,
 				8A6D0C012F9EAE59001D36A6 /* Memory Game Demo AppTests */,
-				8A6D0C0B2F9EAE59001D36A6 /* Memory Game Demo AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,17 +168,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6D0C2C2F9F7807001D36A6 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8A6D0C002F9EAE59001D36A6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8A6D0C0A2F9EAE59001D36A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +196,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A6D0C082F9EAE59001D36A6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,11 +203,6 @@
 			isa = PBXTargetDependency;
 			target = 8A6D0BF42F9EAE57001D36A6 /* Memory Game Demo App */;
 			targetProxy = 8A6D0C032F9EAE59001D36A6 /* PBXContainerItemProxy */;
-		};
-		8A6D0C0E2F9EAE59001D36A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8A6D0BF42F9EAE57001D36A6 /* Memory Game Demo App */;
-			targetProxy = 8A6D0C0D2F9EAE59001D36A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -328,6 +266,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -384,6 +323,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -492,44 +432,6 @@
 			};
 			name = Release;
 		};
-		8A6D0C1D2F9EAE59001D36A6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miroszlav.Memory-Game-Demo-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Memory Game Demo App";
-			};
-			name = Debug;
-		};
-		8A6D0C1E2F9EAE59001D36A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miroszlav.Memory-Game-Demo-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Memory Game Demo App";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,15 +458,6 @@
 			buildConfigurations = (
 				8A6D0C1A2F9EAE59001D36A6 /* Debug */,
 				8A6D0C1B2F9EAE59001D36A6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8A6D0C1C2F9EAE59001D36A6 /* Build configuration list for PBXNativeTarget "Memory Game Demo AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8A6D0C1D2F9EAE59001D36A6 /* Debug */,
-				8A6D0C1E2F9EAE59001D36A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

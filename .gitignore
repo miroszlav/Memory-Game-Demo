@@ -1,0 +1,34 @@
+# --- Xcode ---
+# Build folders
+build/
+DerivedData/
+
+# User specific data
+*.xcuserdatad
+xcuserdata/
+
+# Xcode version and cache files
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.itpbdp
+*.assetcache
+
+# --- macOS ---
+# System files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# --- Swift Package Manager ---
+.swiftpm/xcode/package.resolved
+.build/
+
+# --- Backup ---
+*.bak
+*.swp
+*~
