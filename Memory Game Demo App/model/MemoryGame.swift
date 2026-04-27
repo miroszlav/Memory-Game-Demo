@@ -8,7 +8,23 @@ struct MemoryGame {
     
     init(numberOfPairs: Int) {
         cards = []
-        let emojis = ["A", "B", "C", "D", "E", "F", "G", "H"]
+        let emojis = [
+            "heart.fill",
+            "star.fill",
+            "bell.fill",
+            "bolt.fill",
+            "flame.fill",
+            "leaf.fill",
+            "moon.fill",
+            "sun.max.fill",
+            "cloud.bolt.fill",
+            "snowflake",
+            "pawprint.fill",
+            "tortoise.fill",
+            "bicycle",
+            "car.fill",
+            "airplane"
+        ]
         for i in 0..<numberOfPairs {
             let content = emojis[i % emojis.count]
             cards.append(Card(content: content))

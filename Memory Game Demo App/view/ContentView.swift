@@ -1,14 +1,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var viewModel = EmojiMemoryGame()
     
     var body: some View {
         VStack {
             headerView
+            Spacer(minLength: 10)
             gameGridView
+            Spacer(minLength: 10)
+            difficultyPicker
             newGameButton
         }
+    }
+    
+    @State private var viewModel = EmojiMemoryGame()
+    
+    private var columns: [GridItem] {
+        let minWidth: CGFloat = switch viewModel.difficulty {
+        case .easy: 120
+        case .medium: 80
+        case .hard: 60
+        }
+        return [GridItem(.adaptive(minimum: minWidth))]
+    }
+    
+    private func calculateCardWidth(totalWidth: CGFloat, totalHeight: CGFloat, count: Int) -> CGFloat {
+        let area = totalWidth * totalHeight
+        let cardArea = area / CGFloat(count) * 0.8
+        let width = sqrt(cardArea / 1.3)
+        
+        return min(max(width, 40), 150)
     }
     
     private var headerView: some View {
@@ -28,17 +49,36 @@ struct ContentView: View {
     }
     
     private var gameGridView: some View {
-        ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
+        GeometryReader { geometry in
+            let cardWidth = calculateCardWidth(
+                totalWidth: geometry.size.width,
+                totalHeight: geometry.size.height,
+                count: viewModel.cards.count
+            )
+            
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: cardWidth), spacing: 5)], spacing: 5) {
                 ForEach(viewModel.cards) { card in
                     CardView(card: card)
-                        .aspectRatio(2/3, contentMode: .fit)
+                        .frame(width: cardWidth, height: cardWidth * 1.3)
                         .onTapGesture {
                             viewModel.choose(card)
                         }
                 }
             }
-            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        }
+    }
+    
+    private var difficultyPicker: some View {
+        Picker("difficulty_label", selection: $viewModel.difficulty) {
+            ForEach(GameDifficulty.allCases, id: \.self) { level in
+                Text(LocalizedStringKey(level.label)).tag(level)
+            }
+        }
+        .pickerStyle(.segmented)
+        .padding()
+        .onChange(of: viewModel.difficulty) {
+            viewModel.startNewGame()
         }
     }
     
@@ -66,7 +106,12 @@ struct CardView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 20).fill(.white)
                 RoundedRectangle(cornerRadius: 20).strokeBorder(lineWidth: 3)
-                Text(card.content).font(.largeTitle)
+                Image(systemName: card.content)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(15)
+                    .foregroundColor(.green)
+                    .rotation3DEffect(.degrees(180), axis: (0, 1, 0))
             }
             .rotation3DEffect(.degrees(180), axis: (0, 1, 0))
             .opacity(card.isFaceUp ? 1 : 0)

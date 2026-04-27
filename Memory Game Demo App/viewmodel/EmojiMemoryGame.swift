@@ -3,7 +3,8 @@ import SwiftUI
 @Observable
 class EmojiMemoryGame {
     
-    private static let defaultPairs = 8
+    private static let defaultPairs = GameDifficulty.medium.rawValue
+    var difficulty: GameDifficulty = .medium
     
     private var model: MemoryGame
     private var timer: Timer?
@@ -29,7 +30,7 @@ class EmojiMemoryGame {
     }
     
     func startNewGame() {
-        model = MemoryGame(numberOfPairs: EmojiMemoryGame.defaultPairs)
+        model = MemoryGame(numberOfPairs: difficulty.rawValue)
         startTimer()
     }
     
