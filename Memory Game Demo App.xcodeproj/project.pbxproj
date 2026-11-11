@@ -39,6 +39,11 @@
 			path = "Memory Game Demo AppTests";
 			sourceTree = "<group>";
 		};
+		8AD8F6A130A4DD2000895655 /* screenshots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = screenshots;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 		8A6D0BEC2F9EAE57001D36A6 = {
 			isa = PBXGroup;
 			children = (
+				8AD8F6A130A4DD2000895655 /* screenshots */,
 				8A6D0C2B2F9F7807001D36A6 /* .gitignore */,
 				8A6D0BF72F9EAE57001D36A6 /* Memory Game Demo App */,
 				8A6D0C052F9EAE59001D36A6 /* Memory Game Demo AppTests */,
@@ -96,6 +102,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				8A6D0BF72F9EAE57001D36A6 /* Memory Game Demo App */,
+				8AD8F6A130A4DD2000895655 /* screenshots */,
 			);
 			name = "Memory Game Demo App";
 			packageProductDependencies = (

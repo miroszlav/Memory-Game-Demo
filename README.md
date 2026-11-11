@@ -4,6 +4,12 @@ A small memory (concentration) card game for iOS, built with **SwiftUI** as a ha
 
 Flip two cards at a time and match all the pairs. Matches score +2 points, a miss costs 1 point (never below 0), and a timer shows how long the round takes.
 
+<p align="center">
+  <img src="screenshots/easy.png" width="220" alt="Easy">
+  <img src="screenshots/medium.png" width="220" alt="Medium">
+  <img src="screenshots/hard.png" width="220" alt="Hard">
+</p>
+
 ## Features
 
 - Three difficulty levels (easy: 6 pairs, medium: 8, hard: 15), switchable on the fly
